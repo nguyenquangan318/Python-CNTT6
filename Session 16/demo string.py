@@ -10,10 +10,14 @@ grade_book = [
 # full_name = " ".join(name_list)
 # print(full_name)
 
+def test_func(number):
+    print(f'Sinh viên {number}: ')
+
 # Hàm in thông tin từng sinh viên
 def print_student():
     print('--- DANH SÁCH SINH VIÊN')
-    for student in grade_book:
-        print(f'{student['id']:<7} | {student['name']:<20} | {student['info'][0]:<10} | {student['info'][1]:<10}')
+    for i, student in enumerate(grade_book):
+        # print(f'{student['id']:<7} | {student['name']:<20} | {student['info'][0]:<10} | {student['info'][1]:<10}')
+        test_func(i)
         print('{id:<7} | {name:<20} | {info[0]:<10} | {info[1]:<10}'.format_map(student))
 print_student()
