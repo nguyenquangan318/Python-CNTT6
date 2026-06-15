@@ -1,3 +1,5 @@
+from hrm_package.ui_display import display_records
+
 attendance_book = [
     {"id": "NV01", "name": "Nguyễn Văn A", "times": ("08:30", "17:30")},
     {"id": "NV02", "name": "Trần Thị B", "times": ("09:30", None)}, # Đang làm việc, chưa chấm công ra
@@ -14,6 +16,9 @@ while True:
 ================================================= 
 Chọn chức năng (1-5): ''')
     match choice:
+        case '1':
+            display_records(attendance_book)
+            break
         case '5':
             print('Thoát chương trình')
         case _:
